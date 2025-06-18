@@ -181,10 +181,7 @@ Set up (the latest version of) [HAProxy](http://www.haproxy.org/) in Ubuntu syst
 * `haproxy_listen.{n}.rspidel`: [optional]: Delete all headers matching a regular expression in an HTTP response (ignore case)
 * `haproxy_listen.{n}.rspidel.{n}.search`: [required]: The regular expression applied to HTTP headers and to the response line. Any space or known delimiter must be escaped using a backslash (`'\'`) (in version < 1.6)
 * `haproxy_listen.{n}.rspidel.{n}.cond`: [optional]: A matching condition built from ACLs
-* `haproxy_listen.{n}.replace-uri`: [optional]: Replace a regular expression with a string in an HTTP request line
-* `haproxy_listen.{n}.replace-uri.{n}.search`: [required]: The regular expression applied to HTTP headers and to the request line. Any space or known delimiter must be escaped using a backslash (`'\'`) (in version < 1.6)
-* `haproxy_listen.{n}.replace-uri.{n}.string`: [required]: The complete line to be added. Any space or known delimiter must be escaped using a backslash (`'\'`) (in version < 1.6)
-* `haproxy_listen.{n}.replace-uri.{n}.cond`: [optional]: Matching condition built from ACLs
+
 * `haproxy_listen.{n}.reqirep`: [optional]: Replace a regular expression with a string in an HTTP request line (ignore case)
 * `haproxy_listen.{n}.reqirep.{n}.search`: [required]: The regular expression applied to HTTP headers and to the request line. Any space or known delimiter must be escaped using a backslash (`'\'`) (in version < 1.6)
 * `haproxy_listen.{n}.reqirep.{n}.string`: [required]: The complete line to be added. Any space or known delimiter must be escaped using a backslash (`'\'`) (in version < 1.6)
@@ -272,10 +269,6 @@ Set up (the latest version of) [HAProxy](http://www.haproxy.org/) in Ubuntu syst
 * `haproxy_frontend.{n}.rspidel`: [optional]: Delete all headers matching a regular expression in an HTTP response (ignore case)
 * `haproxy_frontend.{n}.rspidel.{n}.search`: [required]: The regular expression applied to HTTP headers and to the response line. Any space or known delimiter must be escaped using a backslash (`'\'`) (in version < 1.6)
 * `haproxy_frontend.{n}.rspidel.{n}.cond`: [optional]: A matching condition built from ACLs
-* `haproxy_frontend.{n}.replace-uri`: [optional]: Replace a regular expression with a string in an HTTP request line
-* `haproxy_frontend.{n}.replace-uri.{n}.search`: [required]: The regular expression applied to HTTP headers and to the request line. Any space or known delimiter must be escaped using a backslash (`'\'`) (in version < 1.6)
-* `haproxy_frontend.{n}.replace-uri.{n}.string`: [required]: The complete line to be added. Any space or known delimiter must be escaped using a backslash (`'\'`) (in version < 1.6)
-* `haproxy_frontend.{n}.replace-uri.{n}.cond`: [optional]: Matching condition built from ACLs
 * `haproxy_frontend.{n}.reqirep`: [optional]: Replace a regular expression with a string in an HTTP request line (ignore case)
 * `haproxy_frontend.{n}.reqirep.{n}.search`: [required]: The regular expression applied to HTTP headers and to the request line. Any space or known delimiter must be escaped using a backslash (`'\'`) (in version < 1.6)
 * `haproxy_frontend.{n}.reqirep.{n}.string`: [required]: The complete line to be added. Any space or known delimiter must be escaped using a backslash (`'\'`) (in version < 1.6)
@@ -339,10 +332,6 @@ Set up (the latest version of) [HAProxy](http://www.haproxy.org/) in Ubuntu syst
 * `haproxy_backend.{n}.rspidel`: [optional]: Delete all headers matching a regular expression in an HTTP response (ignore case)
 * `haproxy_backend.{n}.rspidel.{n}.search`: [required]: The regular expression applied to HTTP headers and to the response line. Any space or known delimiter must be escaped using a backslash (`'\'`) (in version < 1.6)
 * `haproxy_backend.{n}.rspidel.{n}.cond`: [optional]: A matching condition built from ACLs
-* `haproxy_backend.{n}.replace-uri`: [optional]: Replace a regular expression with a string in an HTTP request line
-* `haproxy_backend.{n}.replace-uri.{n}.search`: [required]: The regular expression applied to HTTP headers and to the request line. Any space or known delimiter must be escaped using a backslash (`'\'`) (in version < 1.6)
-* `haproxy_backend.{n}.replace-uri.{n}.string`: [required]: The complete line to be added. Any space or known delimiter must be escaped using a backslash (`'\'`) (in version < 1.6)
-* `haproxy_backend.{n}.replace-uri.{n}.cond`: [optional]: Matching condition built from ACLs
 * `haproxy_backend.{n}.reqirep`: [optional]: Replace a regular expression with a string in an HTTP request line (ignore case)
 * `haproxy_backend.{n}.reqirep.{n}.search`: [required]: The regular expression applied to HTTP headers and to the request line. Any space or known delimiter must be escaped using a backslash (`'\'`) (in version < 1.6)
 * `haproxy_backend.{n}.reqirep.{n}.string`: [required]: The complete line to be added. Any space or known delimiter must be escaped using a backslash (`'\'`) (in version < 1.6)

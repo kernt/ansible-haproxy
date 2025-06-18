@@ -61,19 +61,6 @@ backend {{ backend.name }}
 {% for action in ['reqadd', 'rspadd'] %}
 {% for params in backend[action] | default([]) %}
   {{ action }} {{ params.string }}{% if params.cond is defined %} {{ params.cond }}{% endif %}
-
-{% endfor %}
-{% endfor %}
-{% for action in ['reqdel', 'reqidel', 'rspdel', 'rspidel'] %}
-{% for params in backend[action] | default([]) %}
-  {{ action }} {{ params.search }}{% if params.cond is defined %} {{ params.cond }}{% endif %}
-
-{% endfor %}
-{% endfor %}
-{% for action in ['replace-uri', 'reqirep', 'rsprep', 'rspirep'] %}
-{% for params in backend[action] | default([]) %}
-  {{ action }} {{ params.search }} {{ params.string }}{% if params.cond is defined %} {{ params.cond }}{% endif %}
-
 {% endfor %}
 {% endfor %}
 {% if backend.stats is defined %}
