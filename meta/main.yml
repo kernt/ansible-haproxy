@@ -8,10 +8,10 @@ galaxy_info:
   license: MIT
   min_ansible_version: 2.10.0
   platforms:
-    - name: Ubuntu
+    - name: ubuntu
       versions:
-        - 24.04
-        - 20.04
+        - "20.04"
+        - "24.04"
   galaxy_tags:
     - system
     - clustering
