@@ -13,7 +13,9 @@
   ansible.builtin.apt_repository:
     repo: "{{ haproxy_ppa }}"
     update_cache: true
-  when: haproxy_use_ppa | bool
+  when:
+    - haproxy_use_ppa | bool
+    - ansible_facts['lsb']['release'] => "20.04"
   tags:
     - haproxy-install-add-repository
 
