@@ -10,8 +10,7 @@ galaxy_info:
   platforms:
     - name: ubuntu
       versions:
-        - "20.04"
-        - "24.04"
+        - jammy
   galaxy_tags:
     - system
     - clustering
