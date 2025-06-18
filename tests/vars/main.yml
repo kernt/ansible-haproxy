@@ -20,7 +20,7 @@ haproxy_frontend:
       - search: "^Host:\\ (.*)"
         string: "Host:\\ foo.com"
     raw_options:
-      - rspideny ^Content-type:\\.*/ms-word
+      - http-response deny ^Content-type:\\.*/ms-word
 
 # back-end section
 haproxy_backend:
@@ -32,7 +32,7 @@ haproxy_backend:
       - "httpchk HEAD / HTTP/1.1\\r\\nHost:localhost"
     server: []
     raw_options:
-      - rspdeny ^Content-type:\\.*/ms-word
+      - http-response deny ^Content-type:\\.*/ms-word
 
 # user-lists section
 haproxy_userlists:
