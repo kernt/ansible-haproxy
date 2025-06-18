@@ -57,10 +57,10 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: "3.x"
-
+# "${{ matrix.ansible-version }}"
       - name: Install test dependencies
         run: |
-          pip install "${{ matrix.ansible-version }}" ansible-lint molecule molecule-plugins[docker] docker pytest pytest-testinfra yamllint
+          pip install ansible ansible-lint molecule molecule-plugins[docker] docker pytest pytest-testinfra yamllint
 
       - name: Run Molecule tests
         run: |
