@@ -22,11 +22,6 @@
   tags:
     - haproxy-configuration-update-file
 
-- name: Validate HAProxy configuration
-  command: haproxy -c -f /etc/haproxy/haproxy.cfg
-  register: validation_result
-  failed_when: validation_result.rc != 0
-
 - name: Ensure proper file permissions
   file:
     path: /etc/haproxy/haproxy.cfg

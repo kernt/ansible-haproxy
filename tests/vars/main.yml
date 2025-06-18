@@ -14,9 +14,9 @@ haproxy_frontend:
   - name: http
     bind:
       - listen: "0.0.0.0:80"
-    mode: http
+    mode: http-request
     default_backend: webservers
-    reqrep:
+    replace-uri:
       - search: "^Host:\\ (.*)"
         string: "Host:\\ foo.com"
     raw_options:

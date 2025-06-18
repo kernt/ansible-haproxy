@@ -70,7 +70,7 @@ backend {{ backend.name }}
 
 {% endfor %}
 {% endfor %}
-{% for action in ['reqrep', 'reqirep', 'rsprep', 'rspirep'] %}
+{% for action in ['replace-uri', 'reqirep', 'rsprep', 'rspirep'] %}
 {% for params in backend[action] | default([]) %}
   {{ action }} {{ params.search }} {{ params.string }}{% if params.cond is defined %} {{ params.cond }}{% endif %}
 
