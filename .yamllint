@@ -10,12 +10,8 @@ rules:
     level: error
   line-length: disable
   truthy: disable
-  comments:
-    min-spaces-from-content: 1
-    comments-indentation: false
- octal-values:
-   forbid-implicit-octal: true
-   forbid-explicit-octal: true
 
 ignore: |
   .tox/
+  .tasks/
+  .meta/
