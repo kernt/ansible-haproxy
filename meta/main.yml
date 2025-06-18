@@ -10,7 +10,7 @@ galaxy_info:
   platforms:
     - name: ubuntu
       versions:
-        - jammy
+        - all
   galaxy_tags:
     - system
     - clustering
