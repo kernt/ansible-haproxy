@@ -13,7 +13,7 @@ haproxy_default_raw_options:
 haproxy_frontend:
   - name: http
     bind:
-      - listen: '0.0.0.0:80'
+      - listen: "0.0.0.0:80"
     mode: http
     default_backend: webservers
     reqrep:
@@ -29,7 +29,7 @@ haproxy_backend:
     balance: roundrobin
     option:
       - forwardfor
-      - 'httpchk HEAD / HTTP/1.1\r\nHost:localhost'
+      - "httpchk HEAD / HTTP/1.1\\r\\nHost:localhost"
     server: []
     raw_options:
       - rspdeny ^Content-type:\\.*/ms-word

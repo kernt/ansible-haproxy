@@ -1,4 +1,6 @@
 ---
+profile: min
+
 warn_list:
   - role-name
   - name[play]

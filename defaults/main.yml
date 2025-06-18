@@ -7,7 +7,6 @@ haproxy_dependencies:
   - name: haproxy
     state: latest
 haproxy_install: []
-
 haproxy_restart_handler_state: restarted
 
 haproxy_conf_template: "etc/haproxy/haproxy.cfg.j2"
@@ -28,15 +27,14 @@ haproxy_global_group: haproxy
 haproxy_global_daemon: true
 haproxy_global_ca_base: /etc/ssl/certs
 haproxy_global_crt_base: /etc/ssl/private
-haproxy_global_ssl_default_bind_ciphers: 'kEECDH+aRSA+AES:kRSA+AES:+AES256:RC4-SHA:!kEDH:!LOW:!EXP:!MD5:!aNULL:!eNULL'
-haproxy_global_ssl_default_bind_ciphersuites: ''
-haproxy_global_ssl_default_bind_options: 'no-sslv3'
-haproxy_global_ssl_default_server_ciphers: 'kEECDH+aRSA+AES:kRSA+AES:+AES256:RC4-SHA:!kEDH:!LOW:!EXP:!MD5:!aNULL:!eNULL'
-haproxy_global_ssl_default_server_ciphersuites: ''
-haproxy_global_ssl_default_server_options: 'no-sslv3'
+haproxy_global_ssl_default_bind_ciphers: "kEECDH+aRSA+AES:kRSA+AES:+AES256:RC4-SHA:!kEDH:!LOW:!EXP:!MD5:!aNULL:!eNULL"
+haproxy_global_ssl_default_bind_ciphersuites: ""
+haproxy_global_ssl_default_bind_options: "no-sslv3"
+haproxy_global_ssl_default_server_ciphers: "kEECDH+aRSA+AES:kRSA+AES:+AES256:RC4-SHA:!kEDH:!LOW:!EXP:!MD5:!aNULL:!eNULL"
+haproxy_global_ssl_default_server_ciphersuites: ""
+haproxy_global_ssl_default_server_options: "no-sslv3"
 haproxy_global_nbproc: 1
 haproxy_global_option: []
-
 # defaults section
 haproxy_defaults_log: global
 haproxy_defaults_mode: http
@@ -69,28 +67,20 @@ haproxy_defaults_errorfile:
 
 # ssl (file) map
 haproxy_ssl_map: []
-
 # listen section
 haproxy_listen: []
-
 # mailers section
 haproxy_mailers: []
-
 # front-end section
 haproxy_frontend: []
-
 # back-end section
 haproxy_backend: []
-
 # user-lists section
 haproxy_userlists: []
-
 # resolvers section:
 haproxy_resolvers: []
-
 # ACL files
 haproxy_acl_files: []
-
 # Letsencrypt (SSL/OCSP deploy)
 haproxy_letsencrypt_ssl_deploy_template: usr/local/bin/haproxy-letsencrypt-ssl-deploy.j2
 haproxy_letsencrypt_ssl_first_cert: "{{ inventory_hostname }}"
