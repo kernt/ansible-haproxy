@@ -64,7 +64,10 @@ jobs:
 
       - name: Run Molecule tests
         run: |
-          molecule test
+          molecule test || (
+           echo "Molecule test failed. Debugging logs:";
+           cat molecule/default/logs/*;
+            )
         env:
           ANSIBLE_FORCE_COLOR: "1"
           ANSIBLE_VERBOSITY: "2"
