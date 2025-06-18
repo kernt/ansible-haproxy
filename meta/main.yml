@@ -10,8 +10,8 @@ galaxy_info:
   platforms:
     - name: Ubuntu
       versions:
-        - Jellyfish
-        - Numbat
+        - 24.04
+        - 20.04
   galaxy_tags:
     - system
     - clustering
