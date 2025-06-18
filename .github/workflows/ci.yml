@@ -60,7 +60,7 @@ jobs:
 
       - name: Install test dependencies
         run: |
-          pip install "${{ matrix.ansible-version }}" ansible-lint molecule molecule-docker docker pytest pytest-testinfra yamllint
+          pip install 'ansible=>2.10.0 ansible-lint molecule molecule-docker docker pytest pytest-testinfra yamllint'
 
       - name: Run Molecule tests
         run: |
